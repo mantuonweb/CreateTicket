@@ -1,20 +1,71 @@
 <!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- https://v4-alpha.getbootstrap.com/components/forms/ -->
+<div>
+<div>
 
+
+<div class="container ">
+<h2>Trouble Ticket</h2>
+  <form class="form-horizontal lefttext" action="/action_page.php">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="email">Account</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="email" placeholder="Enter account number" name="account">
+      </div>
+      <div class="btn-group btn-group-sm col-sm-2" role="group" aria-label="...">
+        <button type="button" class="btn btn-default">Go</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="ticket">Search</label>
+      <div class="col-sm-8">          
+        <input type="text" class="form-control" id="ticket" placeholder="Type in ticket or service item" name="ticket">
+      </div>
+    </div>
+  </form>
+  <p>Filter Result by</p>
+   <div class="btn-group btn-group-sm btn-group-md btn-group-lg" role="group" aria-label="...">
+    <a type="button" class="btn btn-primary">Open<span class="badge">4</span></a>
+    <a type="button" class="btn btn-primary">Waiting<span class="badge">4</span></a>
+    <a type="button" class="btn btn-primary">Resolved<span class="badge">4</span></a>
+    <a type="button" class="btn btn-primary">Close<span class="badge">4</span></a>
+    <a type="button" class="btn btn-primary">All<span class="badge">4</span></a>
+   </div>
+   <ul class="breadcrumb pipe">
+    <li><a href="#">Expand All</a></li>
+    <li><a href="#">Collapse All</a></li>
+    <li><a href="#">Collapse All</a></li>
+   </ul>
+
+<div class="list">
+ <div class="btn-group btn-group-justified" >
+  <a href="#" class="btn btn-primary border-right-none">Ticket No</a>
+  <a href="#" class="btn btn-primary border-left-right-none">Account</a>
+  <a href="#" class="btn btn-primary border-left-right-none">Category</a>
+  <a href="#" class="btn btn-primary border-left-right-none">Status</a>
+  <a href="#" class="btn btn-primary border-left-right-none">Service Item</a>
+  <a href="#" class="btn btn-primary border-left-right-none">Created</a>
+  <a href="#" class="btn btn-primary border-left-none">Last Updated</a>
+ </div>
+<div class="btn-group btn-group-justified" >
+  <a href="#" class="btn btn-default border-right-none">INCXXXXXX</a>
+  <a href="#" class="btn btn-default border-left-right-none">2437604</a>
+  <a href="#" class="btn btn-default border-left-right-none">Data/Circuit/Latency</a>
+  <a href="#" class="btn btn-default border-left-right-none">Open</a>
+  <a href="#" class="btn btn-default border-left-right-none">F3F5.3456.370</a>
+  <a href="#" class="btn btn-default border-left-right-none">05/09/2017</a>
+  <a href="#" class="btn btn-default border-left-none">05/09/2017</a>
+ </div>
+<div class="btn-group btn-group-justified" >
+  <a href="#" class="btn btn-default border-right-none">INCXXXXXX</a>
+  <a href="#" class="btn btn-default border-left-right-none">2437604</a>
+  <a href="#" class="btn btn-default border-left-right-none">Data/Circuit/Latency</a>
+  <a href="#" class="btn btn-default border-left-right-none">Open</a>
+  <a href="#" class="btn btn-default border-left-right-none">F3F5.3456.370</a>
+  <a href="#" class="btn btn-default border-left-right-none">05/09/2017</a>
+  <a href="#" class="btn btn-default border-left-none">05/09/2017</a>
+ </div>
+</div>
+
+ <div>
+</div>

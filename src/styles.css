@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+.breadcrumb.pipe > li + li:before {
+    color: #ccc;
+    content: "| ";
+    padding: 0 5px;
+}
+.breadcrumb.pipe {
+	background-color: white;
+	font-weight: bold;
+}
+.form-horizontal.lefttext .control-label{
+    text-align: left ;
+}
+.item-row{
+	width: 100%;
+}
+.item-row button{
+	width:20%;
+}
+.list .btn-group-justified{
+	padding: 5px 0px;
+}
+.border-left-right-none{
+	border-left:none;
+	border-right: none;
+}
+.border-left-none{
+	border-left:none;
+}
+.border-right-none{
+	border-right: none;
+}
