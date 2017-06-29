@@ -66,24 +66,16 @@
             <a href="#" class="btn btn-primary border-left-right-none">Created</a>
             <a href="#" class="btn btn-primary border-left-none">Last Updated</a>
           </div>
-          <div class="btn-group btn-group-justified" >
-            <a href="#" class="btn btn-default border-right-none">INCXXXXXX</a>
-            <a href="#" class="btn btn-default border-left-right-none">2437604</a>
-            <a href="#" class="btn btn-default border-left-right-none">Data/Circuit/Latency</a>
-            <a href="#" class="btn btn-default border-left-right-none">Open</a>
-            <a href="#" class="btn btn-default border-left-right-none">F3F5.3456.370</a>
-            <a href="#" class="btn btn-default border-left-right-none">05/09/2017</a>
-            <a href="#" class="btn btn-default border-left-none">05/09/2017</a>
+          <div class="btn-group btn-group-justified" *ngFor="let ticket of tickets">
+            <a href="#" class="btn btn-default border-right-none">{{ticket.ticketNo}}</a>
+            <a href="#" class="btn btn-default border-left-right-none">{{ticket.account}}</a>
+            <a href="#" class="btn btn-default border-left-right-none">{{ticket.category}}</a>
+            <a href="#" class="btn btn-default border-left-right-none">{{ticket.status}}</a>
+            <a href="#" class="btn btn-default border-left-right-none">{{ticket.serviceItem}}</a>
+            <a href="#" class="btn btn-default border-left-right-none">{{ticket.Created}}</a>
+            <a href="#" class="btn btn-default border-left-none">{{ticket.lastUpdated}}</a>
           </div>
-          <div class="btn-group btn-group-justified" >
-            <a href="#" class="btn btn-default border-right-none">INCXXXXXX</a>
-            <a href="#" class="btn btn-default border-left-right-none">2437604</a>
-            <a href="#" class="btn btn-default border-left-right-none">Data/Circuit/Latency</a>
-            <a href="#" class="btn btn-default border-left-right-none">Open</a>
-            <a href="#" class="btn btn-default border-left-right-none">F3F5.3456.370</a>
-            <a href="#" class="btn btn-default border-left-right-none">05/09/2017</a>
-            <a href="#" class="btn btn-default border-left-none">05/09/2017</a>
-          </div>
+         
         </div>
         <!-- <div class="list-group">
           <a href="#" class="list-group-item">
@@ -97,41 +89,47 @@
           <a href="#" class="list-group-item list-group-item-action">Created</a>
           <a href="#" class="list-group-item list-group-item-action">Last Updated</a>
         </div> -->
-        <ul class="list-group">
+        <ul class="list-group hidden-md hidden-lg" *ngFor="let ticket of tickets">
+          <li class="list-group-item">
+          <div class="row">
+            <span class="col-xs-4">Ticket No</span>
+            <span class="col-xs-8">{{ticket.ticketNo}}</span>
+          </div>
+          </li>
           <li class="list-group-item">
           <div class="row">
             <span class="col-xs-4">Account</span>
-            <span class="col-xs-8">INCXXX8898989814</span>
+            <span class="col-xs-8">{{ticket.account}}</span>
           </div>
           </li>
           <li class="list-group-item">
           <div class="row">
             <span class="col-xs-4">Category</span>
-            <span class="col-xs-8">INCXXX8898989814</span>
+            <span class="col-xs-8">{{ticket.category}}</span>
             </div>
           </li>
            <li class="list-group-item">
            <div class="row">
             <span class="col-xs-4">Status</span>
-            <span class="col-xs-8">INCXXX8898989814</span>
+            <span class="col-xs-8">{{ticket.status}}</span>
             </div>
           </li>
            <li class="list-group-item">
            <div class="row">
             <span class="col-xs-4">Service Item</span>
-            <span class="col-xs-8">INCXXX8898989814</span>
+            <span class="col-xs-8">{{ticket.serviceItem}}</span>
             </div>
           </li>
           <li class="list-group-item">
           <div class="row">
             <span class="col-xs-4">Created</span>
-            <span class="col-xs-8">INCXXX8898989814</span>
+            <span class="col-xs-8">{{ticket.Created}}</span>
             </div>
           </li>
           <li class="list-group-item">
           <div class="row">
             <span class="col-xs-4">Last Updated</span>
-            <span class="col-xs-8">INCXXX8898989814</span></div>
+            <span class="col-xs-8">{{ticket.lastUpdated}}</span></div>
           </li>
         </ul>
         <!-- https://stackoverflow.com/questions/20804104/bootstrap-3-btn-group-width -->
