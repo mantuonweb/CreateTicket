@@ -1,0 +1,36 @@
+.item-row {
+  width: 100%; }
+  .item-row button {
+    width: 20%; }
+
+body {
+  background-color: red; }
+
+.border-left-right-none {
+  border-left: none;
+  border-right: none; }
+
+.border-left-none {
+  border-left: none; }
+
+.border-right-none {
+  border-right: none; }
+
+.marginheight-20 {
+  margin: 20px 0; }
+
+.breadcrumb.pipe {
+  background-color: transparent;
+  font-weight: bold; }
+  .breadcrumb.pipe > li + li:before {
+    color: #ccc;
+    content: "| ";
+    padding: 0 5px; }
+
+.form-horizontal.lefttext .control-label {
+  text-align: left; }
+
+.list .btn-group-justified {
+  padding: 5px 0; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,45 @@
 <!--The whole content below can be removed with the new code.-->
 <!-- https://v4-alpha.getbootstrap.com/components/forms/ -->
-<div>
+<!-- 
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is HTML?</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. What is Bootstrap?</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. What is CSS?</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div> -->
   <div>
     <div class="container ">
       <h2>Trouble Ticket</h2>
@@ -40,14 +79,11 @@
           <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-hourglass"></span>   <span class="hidden-xs">Waiting</span><span class="badge">4</span></a>
           <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-thumbs-up"></span>
           <span class="hidden-xs">Resolved</span>
-          
           <span class="badge">4</span></a>
           <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span>
-          
           <span class="hidden-xs">Close</span>
           <span class="badge">4</span></a>
           <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-sort-by-alphabet"></span>
-          
           <span class="hidden-xs">All</span>
           <span class="badge">4</span></a>
         </div>
@@ -75,63 +111,113 @@
             <a href="#" class="btn btn-default border-left-right-none">{{ticket.Created}}</a>
             <a href="#" class="btn btn-default border-left-none">{{ticket.lastUpdated}}</a>
           </div>
-         
         </div>
-        <!-- <div class="list-group">
-          <a href="#" class="list-group-item">
-              <span class="col-xs-4">Ticket No</span> 
-              <span class="col-xs-8">Ticket No</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">Account</a>
-          <a href="#" class="list-group-item list-group-item-action">Category</a>
-          <a href="#" class="list-group-item list-group-item-action">Status</a>
-          <a href="#" class="list-group-item list-group-item-action">Service Item</a>
-          <a href="#" class="list-group-item list-group-item-action">Created</a>
-          <a href="#" class="list-group-item list-group-item-action">Last Updated</a>
-        </div> -->
-        <ul class="list-group hidden-md hidden-lg hidden-sm" *ngFor="let ticket of tickets">
-          <li class="list-group-item">
-          <div class="row">
-            <span class="col-xs-4">Ticket No</span>
-            <span class="col-xs-8">{{ticket.ticketNo}}</span>
+
+
+      <div *ngFor="let ticket of tickets;let i=index;" class="hidden-lg hidden-sm hidden-md">
+        <div class="panel panel-primary" >
+          <div class="panel-heading" accordion id="collapseExample{{i}}">
+            <h4 class="panel-title" > {{ticket.ticketNo}} </h4>
           </div>
-          </li>
-          <li class="list-group-item">
-          <div class="row">
-            <span class="col-xs-4">Account</span>
-            <span class="col-xs-8">{{ticket.account}}</span>
+          <div id="collapseExample{{i}}" class="collapse">
+             <ul class="list-group" >
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Ticket No</span>
+                      <span class="col-xs-8">{{ticket.ticketNo}}</span>
+                    </div>
+                    </li>
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Account</span>
+                      <span class="col-xs-8">{{ticket.account}}</span>
+                    </div>
+                    </li>
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Category</span>
+                      <span class="col-xs-8">{{ticket.category}}</span>
+                      </div>
+                    </li>
+                     <li class="list-group-item">
+                     <div class="row">
+                      <span class="col-xs-4">Status</span>
+                      <span class="col-xs-8">{{ticket.status}}</span>
+                      </div>
+                    </li>
+                     <li class="list-group-item">
+                     <div class="row">
+                      <span class="col-xs-4">Service Item</span>
+                      <span class="col-xs-8">{{ticket.serviceItem}}</span>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Created</span>
+                      <span class="col-xs-8">{{ticket.Created}}</span>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Last Updated</span>
+                      <span class="col-xs-8">{{ticket.lastUpdated}}</span></div>
+                    </li>
+                  </ul>
           </div>
-          </li>
-          <li class="list-group-item">
-          <div class="row">
-            <span class="col-xs-4">Category</span>
-            <span class="col-xs-8">{{ticket.category}}</span>
+        </div>
+      </div>
+<!-- 
+        <div *ngFor="let ticket of tickets;let i=index;" class="hidden-lg hidden-sm hidden-md">
+              <button accordion id="myCollapse{{i}}" class="btn btn-primary" type="button" data-toggle="collapse" [attr.data-target]='"#collapseExample"+i' aria-expanded="false" aria-controls="collapseExample">
+                  Button with data-target
+                </button>
+                  <ul class="list-group " id="collapseExample{{i}}">
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Ticket No</span>
+                      <span class="col-xs-8">{{ticket.ticketNo}}</span>
+                    </div>
+                    </li>
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Account</span>
+                      <span class="col-xs-8">{{ticket.account}}</span>
+                    </div>
+                    </li>
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Category</span>
+                      <span class="col-xs-8">{{ticket.category}}</span>
+                      </div>
+                    </li>
+                     <li class="list-group-item">
+                     <div class="row">
+                      <span class="col-xs-4">Status</span>
+                      <span class="col-xs-8">{{ticket.status}}</span>
+                      </div>
+                    </li>
+                     <li class="list-group-item">
+                     <div class="row">
+                      <span class="col-xs-4">Service Item</span>
+                      <span class="col-xs-8">{{ticket.serviceItem}}</span>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Created</span>
+                      <span class="col-xs-8">{{ticket.Created}}</span>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                    <div class="row">
+                      <span class="col-xs-4">Last Updated</span>
+                      <span class="col-xs-8">{{ticket.lastUpdated}}</span></div>
+                    </li>
+                  </ul>
             </div>
-          </li>
-           <li class="list-group-item">
-           <div class="row">
-            <span class="col-xs-4">Status</span>
-            <span class="col-xs-8">{{ticket.status}}</span>
-            </div>
-          </li>
-           <li class="list-group-item">
-           <div class="row">
-            <span class="col-xs-4">Service Item</span>
-            <span class="col-xs-8">{{ticket.serviceItem}}</span>
-            </div>
-          </li>
-          <li class="list-group-item">
-          <div class="row">
-            <span class="col-xs-4">Created</span>
-            <span class="col-xs-8">{{ticket.Created}}</span>
-            </div>
-          </li>
-          <li class="list-group-item">
-          <div class="row">
-            <span class="col-xs-4">Last Updated</span>
-            <span class="col-xs-8">{{ticket.lastUpdated}}</span></div>
-          </li>
-        </ul>
+         -->
+       
+
         <!-- https://stackoverflow.com/questions/20804104/bootstrap-3-btn-group-width -->
         <div class="row">
           <div class="btn-group marginheight-20 col-sm-6">
