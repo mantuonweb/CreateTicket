@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 import { Accordion } from './accordion';
 import { AppComponent } from './app.component';
 import { CreateTicket } from './ticket/create.ticket';
+import { AddNewTicket } from './ticket/addnew';
 import { routeConfig } from './routingConfig'
 import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent,Accordion,CreateTicket
+    AppComponent,Accordion,CreateTicket,AddNewTicket
   ],
     imports: [
     BrowserModule,
