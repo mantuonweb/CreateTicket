@@ -1,0 +1,151 @@
+<div>
+  <div class="container ">
+    <h2>Trouble Ticket</h2>
+    <form class="form-horizontal lefttext" action="/action_page.php">
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="email">Account</label>
+        <div class="col-sm-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go</button>
+            </span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="ticket">Search</label>
+        <div class="col-sm-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </form>
+    <p>Filter Result by</p>
+    <div class="btn-group btn-group-sm btn-group-md btn-group-lg btn-group-justified-xs" role="group" aria-label="...">
+      <a type="button" class="btn btn-primary">
+        <span class="glyphicon glyphicon-open"></span>
+        <span class="hidden-xs">Open</span>
+        <span class="badge">4</span></a>
+        <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-hourglass"></span>   <span class="hidden-xs">Waiting</span><span class="badge">4</span></a>
+        <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-thumbs-up"></span>
+        <span class="hidden-xs">Resolved</span>
+        <span class="badge">4</span></a>
+        <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span>
+        <span class="hidden-xs">Close</span>
+        <span class="badge">4</span></a>
+        <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-sort-by-alphabet"></span>
+        <span class="hidden-xs">All</span>
+        <span class="badge">4</span></a>
+      </div>
+      <ul class="breadcrumb pipe">
+        <li><a href="#">Expand All</a></li>
+        <li><a href="#">Collapse All</a></li>
+        <li><a href="#">Export</a></li>
+      </ul>
+      <div class="list hidden-xs">
+        <div class="btn-group btn-group-justified" >
+          <a href="#" class="btn btn-primary border-right-none">Ticket No</a>
+          <a href="#" class="btn btn-primary border-left-right-none">Account</a>
+          <a href="#" class="btn btn-primary border-left-right-none">Category</a>
+          <a href="#" class="btn btn-primary border-left-right-none">Status</a>
+          <a href="#" class="btn btn-primary border-left-right-none">Service Item</a>
+          <a href="#" class="btn btn-primary border-left-right-none">Created</a>
+          <a href="#" class="btn btn-primary border-left-none">Last Updated</a>
+        </div>
+        <div class="btn-group btn-group-justified" *ngFor="let ticket of tickets">
+          <a href="#" class="btn btn-default border-right-none">{{ticket.ticketNo}}</a>
+          <a href="#" class="btn btn-default border-left-right-none">{{ticket.account}}</a>
+          <a href="#" class="btn btn-default border-left-right-none">{{ticket.category}}</a>
+          <a href="#" class="btn btn-default border-left-right-none">{{ticket.status}}</a>
+          <a href="#" class="btn btn-default border-left-right-none">{{ticket.serviceItem}}</a>
+          <a href="#" class="btn btn-default border-left-right-none">{{ticket.Created}}</a>
+          <a href="#" class="btn btn-default border-left-none">{{ticket.lastUpdated}}</a>
+        </div>
+      </div>
+      <div *ngFor="let ticket of tickets;let i=index;" class="hidden-lg hidden-sm hidden-md">
+        <div class="panel panel-primary" >
+          <div class="panel-heading" accordion id="collapseExample{{i}}">
+            <h4 class="panel-title" > {{ticket.ticketNo}} </h4>
+          </div>
+          <div id="collapseExample{{i}}" class="collapse">
+            <ul class="list-group" >
+              <li class="list-group-item">
+                <div class="row">
+                  <span class="col-xs-4">Ticket No</span>
+                  <span class="col-xs-8">{{ticket.ticketNo}}</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <span class="col-xs-4">Account</span>
+                  <span class="col-xs-8">{{ticket.account}}</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <span class="col-xs-4">Category</span>
+                  <span class="col-xs-8">{{ticket.category}}</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <span class="col-xs-4">Status</span>
+                  <span class="col-xs-8">{{ticket.status}}</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <span class="col-xs-4">Service Item</span>
+                  <span class="col-xs-8">{{ticket.serviceItem}}</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <span class="col-xs-4">Created</span>
+                  <span class="col-xs-8">{{ticket.Created}}</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <span class="col-xs-4">Last Updated</span>
+                  <span class="col-xs-8">{{ticket.lastUpdated}}</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- https://stackoverflow.com/questions/20804104/bootstrap-3-btn-group-width -->
+        <div class="row">
+          <div class="btn-group marginheight-20 col-sm-6">
+            <button type="button" class="btn btn-default">Notification Options</button>
+            <button type="button" class="btn btn-default">New Trouble Ticket</button>
+          </div>
+          
+          <div class="col-sm-6 hidden-xs">
+            <ul class="pagination pull-right">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+        </div>
