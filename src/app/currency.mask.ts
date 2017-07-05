@@ -1,5 +1,6 @@
 import { Directive, HostListener, ElementRef, OnInit } from "@angular/core";
 //http://plnkr.co/edit/rKq8yCoNhwXFozKsKPZf?p=preview
+//https://github.com/text-mask/text-mask/tree/master/angular2
 @Directive({ selector: "[CurrencyFormatter]" })
 export class CurrencyFormatter implements OnInit {
 
