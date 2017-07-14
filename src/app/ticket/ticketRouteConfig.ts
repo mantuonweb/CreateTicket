@@ -14,7 +14,7 @@ export const ticketRouteConfig=[{
 		//auxiliary routes
 		
 	]
-	},{
+		},{
 			path:'createnew',
 			component:AddNewTicket,
 			outlet:'createticket'
