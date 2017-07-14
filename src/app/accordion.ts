@@ -11,6 +11,7 @@ export class Accordion {
   @Input() item:any={};
   isShown:boolean=false;
   constructor(_elementRef: ElementRef) {
+    console.log(this.id);
     $("#"+this.id).collapse('hide');
     this.item.isShown = false;
 	}

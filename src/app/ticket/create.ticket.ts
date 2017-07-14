@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 })
 export class CreateTicket {
   title = 'app';
-
   public tickets:any[]=[
   {
     "ticketNo": "INCXXXXXX0",

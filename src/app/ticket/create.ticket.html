@@ -58,9 +58,9 @@
           <a href="#" class="btn btn-primary border-left-right-none">Created</a>
           <a href="#" class="btn btn-primary border-left-none">Last Updated</a>
         </div>
-        <div *ngFor="let ticket of tickets">
-            <div class="btn-group btn-group-justified" >
-              <a href="#" class="btn btn-default border-right-none">{{ticket.ticketNo}}1</a>
+        <div *ngFor="let ticket of tickets;let i=index;" class="ticket-info-row" >
+            <div class="btn-group btn-group-justified" accordion id="collapseDTRow{{i}}" [item]="ticket">
+              <a href="#" class="btn btn-default border-right-none"> <i class="glyphicon " [ngClass]="{'glyphicon-triangle-right': !ticket.isShown, 'glyphicon-triangle-bottom': ticket.isShown}"></i> {{ticket.ticketNo}}1</a>
               <a href="#" class="btn btn-default border-left-right-none">{{ticket.account}}</a>
               <a href="#" class="btn btn-default border-left-right-none">{{ticket.category}}</a>
               <a href="#" class="btn btn-default border-left-right-none">{{ticket.status}}</a>
@@ -68,7 +68,7 @@
               <a href="#" class="btn btn-default border-left-right-none">{{ticket.Created}}</a>
               <a href="#" class="btn btn-default border-left-none">{{ticket.lastUpdated}}</a>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="collapseDTRow{{i}}">
               <div class="panel-body">Panel Content</div>
             </div>
         </div>

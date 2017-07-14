@@ -32,14 +32,10 @@ body {
 
 .list .btn-group-justified {
   padding: 5px 0; }
-.btn-green{
-  background-color: #77B200;
-  color: white;
-}
-.green-border{
-  border:1px solid #77B200;
-}
-.pagination a{
-  color:#77B200 !important;
-}
+
+.ticket-info-row .btn-group {
+  padding-bottom: 0; }
+.ticket-info-row .panel {
+  margin-top: -3px; }
+
 /*# sourceMappingURL=styles.css.map */
