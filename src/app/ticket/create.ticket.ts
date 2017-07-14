@@ -71,4 +71,10 @@ export class CreateTicket {
   //   "category": "Latency"
   // }
 ];
+openSmall(){
+
+}
+openLarge(){
+
+}
 }
