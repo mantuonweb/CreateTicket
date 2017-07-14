@@ -7,8 +7,8 @@ import { Directive,ElementRef,Input } from '@angular/core';
 })
 export class Popup {
 	@Input() message: String;
-    constructor(_elementRef: ElementRef) {
-    console.log(_elementRef);
+	    constructor(_elementRef: ElementRef) {
+	    console.log(_elementRef);
 	}
 	displayMessage(){
 		alert(this.message);

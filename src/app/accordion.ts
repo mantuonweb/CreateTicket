@@ -8,10 +8,14 @@ declare var $;
 })
 export class Accordion {
 	@Input() id: String;
-    constructor(_elementRef: ElementRef) {
+  @Input() item:any={};
+  isShown:boolean=false;
+  constructor(_elementRef: ElementRef) {
     $("#"+this.id).collapse('hide');
+    this.item.isShown = false;
 	}
 	toggle(){
 		$("#"+this.id).collapse('toggle');
+    this.item.isShown =! this.item.isShown;
 	}
 }

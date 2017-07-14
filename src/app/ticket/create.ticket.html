@@ -8,19 +8,18 @@
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for...">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Go</button>
+              <button class="btn btn-default btn-green" type="button">Go</button>
             </span>
           </div>
         </div>
-        
       </div>
       <div class="form-group">
         <label class="control-label col-sm-1" for="ticket">Search</label>
         <div class="col-sm-12">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+            <span class="input-group-btn ">
+              <button class="btn btn-default btn-green" type="button"><span class="glyphicon glyphicon-search"></span></button>
             </span>
           </div>
         </div>
@@ -32,7 +31,8 @@
         <span class="glyphicon glyphicon-open"></span>
         <span class="hidden-xs">Open</span>
         <span class="badge">4</span></a>
-        <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-hourglass"></span>   <span class="hidden-xs">Waiting</span><span class="badge">4</span></a>
+        <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-hourglass"></span>
+        <span class="hidden-xs">Waiting </span><span class="badge">4</span></a>
         <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-thumbs-up"></span>
         <span class="hidden-xs">Resolved</span>
         <span class="badge">4</span></a>
@@ -58,20 +58,25 @@
           <a href="#" class="btn btn-primary border-left-right-none">Created</a>
           <a href="#" class="btn btn-primary border-left-none">Last Updated</a>
         </div>
-        <div class="btn-group btn-group-justified" *ngFor="let ticket of tickets">
-          <a href="#" class="btn btn-default border-right-none">{{ticket.ticketNo}}</a>
-          <a href="#" class="btn btn-default border-left-right-none">{{ticket.account}}</a>
-          <a href="#" class="btn btn-default border-left-right-none">{{ticket.category}}</a>
-          <a href="#" class="btn btn-default border-left-right-none">{{ticket.status}}</a>
-          <a href="#" class="btn btn-default border-left-right-none">{{ticket.serviceItem}}</a>
-          <a href="#" class="btn btn-default border-left-right-none">{{ticket.Created}}</a>
-          <a href="#" class="btn btn-default border-left-none">{{ticket.lastUpdated}}</a>
+        <div *ngFor="let ticket of tickets">
+            <div class="btn-group btn-group-justified" >
+              <a href="#" class="btn btn-default border-right-none">{{ticket.ticketNo}}1</a>
+              <a href="#" class="btn btn-default border-left-right-none">{{ticket.account}}</a>
+              <a href="#" class="btn btn-default border-left-right-none">{{ticket.category}}</a>
+              <a href="#" class="btn btn-default border-left-right-none">{{ticket.status}}</a>
+              <a href="#" class="btn btn-default border-left-right-none">{{ticket.serviceItem}}</a>
+              <a href="#" class="btn btn-default border-left-right-none">{{ticket.Created}}</a>
+              <a href="#" class="btn btn-default border-left-none">{{ticket.lastUpdated}}</a>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-body">Panel Content</div>
+            </div>
         </div>
       </div>
       <div *ngFor="let ticket of tickets;let i=index;" class="hidden-lg hidden-sm hidden-md">
         <div class="panel panel-primary" >
-          <div class="panel-heading" accordion id="collapseExample{{i}}">
-            <h4 class="panel-title" > {{ticket.ticketNo}} </h4>
+          <div class="panel-heading" accordion id="collapseExample{{i}}" [item]="ticket">
+            <span class="panel-title" > {{ticket.ticketNo}} </span> <span class="glyphicon  pull-right" [ngClass]="{'glyphicon-plus': !ticket.isShown, 'glyphicon-minus': ticket.isShown}"></span>
           </div>
           <div id="collapseExample{{i}}" class="collapse">
             <ul class="list-group" >
@@ -122,11 +127,10 @@
         </div>
         <!-- https://stackoverflow.com/questions/20804104/bootstrap-3-btn-group-width -->
         <div class="row">
-          <div class="btn-group marginheight-20 col-sm-6">
-            <button type="button" class="btn btn-default">Notification Options</button>
-            <button type="button" class="btn btn-default">New Trouble Ticket</button>
+          <div class="btn-group  marginheight-20 col-sm-6">
+            <button type="button" class="btn btn-default btn-green">Notification Options</button>
+            <button type="button" class="btn btn-default btn-green">New Trouble Ticket</button>
           </div>
-          
           <div class="col-sm-6 hidden-xs">
             <ul class="pagination pull-right">
               <li>
