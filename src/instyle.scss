@@ -1,5 +1,5 @@
 //colors
-$color_celeste_approx: #ccc;
+$color_celeste_approx: #2e6da4;
 $transparent: transparent;
 $color_backgound:#ccc;
 .item-row {
@@ -27,9 +27,9 @@ body{
 .breadcrumb.pipe {
 	background-color: $transparent;
 	font-weight: bold;
-	> li + li:before {
+	 li + li:before {
 		color: $color_celeste_approx;
-		content: "| ";
+		content: "|";
 		padding: 0 5px;
 	}
 }
@@ -46,4 +46,79 @@ body{
 	.panel{
 	    margin-top: -3px;
 	}
+}
+/* Smartphones (portrait and landscape) ----------- */
+// https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.modal-dialog {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.modal-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  border: 0;
+}
+
+// .modal-title {
+//   font-weight: 300;
+//   font-size: 2em;
+//   color: #fff;
+//   line-height: 30px;
+// }
+
+.modal-body {
+  position: absolute;
+  top: 50px;
+  bottom: 60px;
+  width: 100%;
+  overflow: auto;
+}
+
+.modal-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  padding: 10px;
+//   background: #f1f3f5;
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+//   background: #f1f3f5;
+  border-left: 1px solid darken(#f1f3f5, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: darken(#f1f3f5, 20%);
+}
 }

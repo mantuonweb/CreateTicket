@@ -42,34 +42,34 @@ export class CreateTicket {
     "lastUpdated": "2015-01-03",
     "status": "Open",
     "category": "Data/Circuit"
-   }//,
-  // {
-  //   "ticketNo": "INCXXXXXX4",
-  //   "account": 24376044,
-  //   "serviceItem": "$3,718.09",
-  //   "Created": "2016-10-11",
-  //   "lastUpdated": "2016-03-16",
-  //   "status": "Waiting",
-  //   "category": "Latency"
-  // },
-  // {
-  //   "ticketNo": "INCXXXXXX5",
-  //   "account": 24376045,
-  //   "serviceItem": "$1,938.86",
-  //   "Created": "2015-09-04",
-  //   "lastUpdated": "2016-09-12",
-  //   "status": "Open",
-  //   "category": "Data/Circuit/Latency"
-  // },
-  // {
-  //   "ticketNo": "INCXXXXXX6",
-  //   "account": 24376046,
-  //   "serviceItem": "$3,107.96",
-  //   "Created": "2016-07-25",
-  //   "lastUpdated": "2014-09-12",
-  //   "status": "Waiting",
-  //   "category": "Latency"
-  // }
+   },
+  {
+    "ticketNo": "INCXXXXXX4",
+    "account": 24376044,
+    "serviceItem": "$3,718.09",
+    "Created": "2016-10-11",
+    "lastUpdated": "2016-03-16",
+    "status": "Waiting",
+    "category": "Latency"
+  },
+  {
+    "ticketNo": "INCXXXXXX5",
+    "account": 24376045,
+    "serviceItem": "$1,938.86",
+    "Created": "2015-09-04",
+    "lastUpdated": "2016-09-12",
+    "status": "Open",
+    "category": "Data/Circuit/Latency"
+  },
+  {
+    "ticketNo": "INCXXXXXX6",
+    "account": 24376046,
+    "serviceItem": "$3,107.96",
+    "Created": "2016-07-25",
+    "lastUpdated": "2014-09-12",
+    "status": "Waiting",
+    "category": "Latency"
+  }
 ];
 openSmall(){
 
